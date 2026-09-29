@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<title>لسينو 🌹</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#000;--ink:#f6dfe3;--rose:#e0264a;--deep:#b3122b;--wine:#7a0b1e;--soft:#ff8fa5;--gold:#d9b26f;--panel:#12050a;
+--head:'Aref Ruqaa','Amiri','Noto Naskh Arabic',serif;--body:'Amiri','Noto Naskh Arabic',serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+[hidden]{display:none!important}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:var(--body);text-align:center;
+background-image:radial-gradient(ellipse at 50% 0%,#33071480 0%,transparent 62%),radial-gradient(ellipse at 50% 100%,#1c040b 0%,transparent 55%);background-attachment:fixed}
+.screen{display:none;min-height:100dvh;padding:58px 22px 28px;flex-direction:column;align-items:center;justify-content:center;gap:20px}
+.screen.low{justify-content:flex-start;padding-top:max(58px,6vh)}
+.screen.on{display:flex;animation:in .7s ease both}
+@keyframes in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.top{position:fixed;top:calc(env(safe-area-inset-top,0px) + 22px);left:0;right:0;display:flex;justify-content:center;gap:8px;z-index:8;pointer-events:none}
+.top i{width:7px;height:7px;border-radius:8px;background:#3a0a14;transition:.4s}
+.top i.on{width:24px;background:var(--rose)}
+#mu{position:fixed;top:calc(env(safe-area-inset-top,0px) + 8px);left:12px;z-index:10;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--wine);background:#000a;color:var(--soft);font-size:20px;cursor:pointer}
+.rose{width:118px;height:118px;filter:drop-shadow(0 0 22px rgba(224,38,74,.5))}
+.bouq{width:min(62vw,230px);height:auto;filter:drop-shadow(0 0 28px rgba(224,38,74,.45));animation:bloom 1.5s cubic-bezier(.2,.9,.3,1.2) both}
+@keyframes bloom{from{opacity:0;transform:scale(.7) translateY(24px)}to{opacity:1;transform:none}}
+h1{font-family:var(--head);font-weight:700;font-size:clamp(32px,9.5vw,50px);line-height:1.5;margin:0;max-width:14em}
+.wish{font-size:21px;line-height:1.95;margin:0;max-width:19em}
+.btns{display:flex;flex-direction:column;gap:14px;width:100%;max-width:340px;margin-top:8px;align-items:center}
+.low .btns{margin-top:auto}
+.b{display:flex;align-items:center;justify-content:center;width:100%;font:700 22px var(--body);min-height:54px;border-radius:30px;border:1.5px solid var(--rose);cursor:pointer;text-decoration:none;
+background:linear-gradient(#c2183a,#8e0f24);color:#fff;box-shadow:0 6px 22px rgba(179,18,43,.35);transition:transform .15s}
+.b.alt{background:transparent;color:var(--soft);box-shadow:none}
+.b.pulse{animation:pulse 2.2s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 6px 22px rgba(179,18,43,.35)}50%{box-shadow:0 0 0 8px rgba(224,38,74,.18),0 6px 26px rgba(224,38,74,.6)}}
+.b:active,button.n:active{transform:scale(.96)}
+.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;width:100%}
+button.n{aspect-ratio:1;min-height:50px;border-radius:50%;font:700 22px var(--body);background:transparent;color:var(--soft);border:1.5px solid var(--rose);cursor:pointer}
+button.n:active{background:var(--rose);color:#fff}
+.rep{font-family:var(--head);font-weight:700;font-size:clamp(34px,10vw,48px);line-height:1.6;color:var(--soft);margin:10px 0 0;animation:in .8s ease both}
+:focus-visible{outline:3px solid var(--soft);outline-offset:3px}
+.hint{font-size:20px;color:var(--soft);margin:0;transition:opacity .4s}
+.gift{position:relative;width:220px;height:250px;border:0;background:none;padding:0;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.gift .body,.gift .lid{position:absolute;left:0;right:0;border-radius:6px}
+.gift .body{left:14px;right:14px;bottom:0;height:130px;background:var(--wine);box-shadow:0 0 44px rgba(179,18,43,.4)}
+.gift .lid{bottom:124px;height:48px;background:var(--deep);z-index:3;transition:transform .7s cubic-bezier(.2,.9,.3,1.2);transform-origin:left bottom}
+.gift .body::after,.gift .lid::after{content:"";position:absolute;top:0;bottom:0;left:50%;width:30px;margin-left:-15px;background:#000;border-inline:1px solid var(--gold)}
+.gift .bq{position:absolute;left:0;right:0;width:100%;bottom:126px;z-index:2;opacity:0;transform:translateY(90px) scale(.6);transition:transform .9s cubic-bezier(.2,.9,.3,1.2) .3s,opacity .4s .3s}
+.gift.open .lid{transform:translate(-34px,-46px) rotate(-16deg)}
+.gift.open .bq{opacity:1;transform:translateY(-6px) scale(1)}
+.gift:not(.open){animation:nudge 2.6s ease-in-out infinite}
+@keyframes nudge{0%,100%{transform:none}50%{transform:translateY(-6px)}}
+.card{max-height:0;overflow:hidden;opacity:0;width:100%;max-width:400px;transition:max-height 1.4s ease,opacity 1s ease}
+.card.show{max-height:2000px;opacity:1}
+.card .in{background:linear-gradient(#160610,#0b0206);border:1px solid #d9b26f55;border-radius:20px;padding:30px 20px 24px;box-shadow:0 0 50px rgba(179,18,43,.25)}
+.card h2{font-family:var(--head);font-size:clamp(32px,9vw,42px);color:var(--soft);margin:0 0 6px;line-height:1.5}
+.orn{height:1px;width:60%;margin:8px auto 16px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.poem{font-size:21px;line-height:2.15;margin:0}
+.poem span{display:block;opacity:0}
+.show .poem span{animation:up .9s ease forwards}
+@keyframes up{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.poem .last{margin-top:10px;font:700 25px var(--head);color:var(--rose)}
+.sig{font:700 26px var(--head);color:var(--gold);margin:14px 0 0;opacity:0}
+.show .sig{animation:up .9s ease 6.2s forwards}
+.tg{margin:12px 0 0;color:var(--gold);font-size:19px}
+.acts{display:flex;flex-direction:column;gap:12px;width:100%;max-width:400px;margin-top:6px}
+#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:9}
+@media (prefers-reduced-motion:reduce){.screen.on,.bouq,.b.pulse,.gift:not(.open){animation:none}.poem span,.sig{opacity:1;animation:none!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<radialGradient id="rg" cx="50%" cy="38%" r="65%"><stop offset="0" stop-color="#ff5b7a"/><stop offset=".55" stop-color="#d81f45"/><stop offset="1" stop-color="#8e0f24"/></radialGradient>
+<symbol id="r" viewBox="0 0 100 100">
+<path d="M50 6C80 6 96 30 91 56C86 82 64 95 50 95C36 95 14 82 9 56C4 30 20 6 50 6Z" fill="#6a0919"/>
+<path d="M13 44C8 72 30 92 50 90C34 76 27 60 27 38Z" fill="#a3122b"/>
+<path d="M87 44C92 72 70 92 50 90C66 76 73 60 73 38Z" fill="#a3122b"/>
+<path d="M22 44C22 20 78 20 78 44C78 68 63 80 50 80C37 80 22 68 22 44Z" fill="url(#rg)"/>
+<path d="M33 44C33 29 67 29 67 44C67 58 59 67 50 67C41 67 33 58 33 44Z" fill="#c2183a"/>
+<path d="M41 47C41 36 59 36 59 47C59 55 50 59 45 55C42 52 45 46 50 47" stroke="#ff8fa5" fill="none" stroke-width="2.6" stroke-linecap="round"/>
+<path d="M26 38C30 26 42 22 50 22M74 38C70 26 58 22 50 22" stroke="#fff" stroke-opacity=".22" fill="none" stroke-width="2.4" stroke-linecap="round"/>
+</symbol>
+<symbol id="fl" viewBox="0 0 260 190">
+<g stroke="#1f4a30" stroke-width="4" fill="none" stroke-linecap="round"><path d="M130 190V120"/><path d="M112 190C104 160 94 140 84 118"/><path d="M148 190C156 160 166 140 176 118"/></g>
+<g fill="#1f4a30"><ellipse cx="62" cy="140" rx="36" ry="11" transform="rotate(-32 62 140)"/><ellipse cx="198" cy="140" rx="36" ry="11" transform="rotate(32 198 140)"/></g>
+<g fill="#2d6a45"><ellipse cx="96" cy="152" rx="30" ry="9" transform="rotate(-14 96 152)"/><ellipse cx="164" cy="152" rx="30" ry="9" transform="rotate(14 164 152)"/><ellipse cx="34" cy="106" rx="24" ry="8" transform="rotate(-55 34 106)"/><ellipse cx="226" cy="106" rx="24" ry="8" transform="rotate(55 226 106)"/></g>
+<g fill="#f5d0d6"><circle cx="24" cy="58" r="3.5"/><circle cx="36" cy="40" r="3"/><circle cx="236" cy="58" r="3.5"/><circle cx="224" cy="40" r="3"/><circle cx="96" cy="8" r="3"/><circle cx="166" cy="8" r="3"/><circle cx="14" cy="84" r="3"/><circle cx="246" cy="84" r="3"/></g>
+<use href="#r" x="101" y="6" width="58" height="58"/>
+<use href="#r" x="46" y="20" width="60" height="60"/>
+<use href="#r" x="154" y="20" width="60" height="60"/>
+<use href="#r" x="22" y="64" width="66" height="66"/>
+<use href="#r" x="172" y="64" width="66" height="66"/>
+<use href="#r" x="88" y="50" width="84" height="84"/>
+</symbol>
+</defs></svg>
+
+<div class="top" id="dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i><i></i></div>
+<button id="mu" aria-label="الموسيقى" hidden>🎵</button>
+
+<section class="screen low on" id="s0">
+  <svg class="bouq" viewBox="0 0 260 300" aria-hidden="true">
+    <use href="#fl" x="0" y="0" width="260" height="190"/>
+    <path d="M46 158L214 158L142 296L118 296Z" fill="#16070b" stroke="#7a0b1e" stroke-width="1.5"/>
+    <path d="M58 166Q130 200 202 166L140 294L120 294Z" fill="#2a0a12" stroke="#b3122b" stroke-width="1.5"/>
+    <path d="M96 208Q130 222 164 208" stroke="#c2183a" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <ellipse cx="112" cy="222" rx="15" ry="8" transform="rotate(-25 112 222)" fill="#c2183a"/>
+    <ellipse cx="148" cy="222" rx="15" ry="8" transform="rotate(25 148 222)" fill="#c2183a"/>
+    <path d="M126 228L114 256M134 228L146 256" stroke="#c2183a" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="130" cy="222" r="7" fill="#e0264a"/>
+  </svg>
+  <h1>كل عام وأنتِ بخير يا سينو</h1>
+  <p class="wish">عيد ميلادكِ التاسع عشر، وتبدأين اليوم سنة جديدة. أدعو الله أن يرزقكِ رزقاً واسعاً وعمراً طويلاً مباركاً، وأن يملأ قلبكِ فرحاً وأيامكِ طمأنينة.</p>
+  <div class="btns">
+    <p class="hint">اضغطي على عيسو لنكمل</p>
+    <button class="b pulse" data-go="s1">عيسو</button>
+  </div>
+</section>
+
+<section class="screen" id="s1">
+  <svg class="rose"><use href="#r"/></svg>
+  <h1>هل تحبينني يا سينو؟</h1>
+  <div class="btns">
+    <button class="b" data-go="sr">نعم</button>
+    <button class="b alt" data-go="sr">نعم كثيراً</button>
+  </div>
+</section>
+
+<section class="screen low" id="sr">
+  <svg class="rose"><use href="#r"/></svg>
+  <h1>كم تحبينني من 10؟</h1>
+  <p class="rep" id="rep" hidden>عيسووو يحبكِ أكثر ههه ❤️</p>
+  <div class="btns">
+    <div class="grid" id="grid" dir="ltr">
+      <button class="n">1</button><button class="n">2</button><button class="n">3</button><button class="n">4</button><button class="n">5</button>
+      <button class="n">6</button><button class="n">7</button><button class="n">8</button><button class="n">9</button><button class="n">10</button>
+    </div>
+    <button class="b" id="nx" data-go="s2" hidden>التالي</button>
+  </div>
+</section>
+
+<section class="screen" id="s2">
+  <svg class="rose"><use href="#r"/></svg>
+  <h1>وأنتِ تدخلين سنة جديدة من عمركِ، هل تريدين أن تكملي باقي حياتكِ معي؟</h1>
+  <div class="btns">
+    <button class="b" data-go="s3">نعم</button>
+    <button class="b alt" data-go="s3">نعم ههه</button>
+  </div>
+</section>
+
+<section class="screen" id="s3">
+  <p class="hint" id="hint">عندي لكِ هدية، اضغطي على الصندوق</p>
+  <button class="gift" id="gift" aria-label="افتحي الهدية">
+    <svg class="bq" viewBox="0 0 260 190" aria-hidden="true"><use href="#fl" width="260" height="190"/></svg>
+    <span class="body"></span><span class="lid"></span>
+  </button>
+  <div class="card" id="card"><div class="in">
+    <h2>كل عام وأنتِ حبيبتي يا سينو</h2>
+    <div class="orn"></div>
+    <p class="poem">
+      <span>مشتاقٌ إليكِ يا سينو والشوقُ يَكويني</span>
+      <span>وحضنُكِ وحدَهُ وطنٌ دافئٌ يُؤويني</span>
+      <span>أريدُ يدَكِ في يدي وعينَيكِ تَحميني</span>
+      <span>وما زالَ قلبي كلَّ صباحٍ باسمِكِ يُناديني</span>
+      <span>أريدُكِ اليومَ وغدًا وكلَّ العمرِ</span>
+      <span>فأنتِ نبضي الذي يُحييني</span>
+      <span class="last">أحبكِ، وأريدكِ كلَّ العمر</span>
+    </p>
+    <p class="sig">عيسو</p>
+    <p class="tg" id="tg" hidden></p>
+  </div></div>
+  <div class="acts" id="acts" hidden>
+    <button class="b alt" id="more">🎉 مفرقعات أكثر</button>
+    <a class="b" id="wa" target="_blank" rel="noopener" hidden>💌 ردّي على عيسو</a>
+  </div>
+</section>
+
+<canvas id="fx" aria-hidden="true"></canvas>
+<script>
+/* ===== إعدادات اختيارية ===== */
+var CONFIG={
+  since:'',   /* تاريخ بداية قصتكما، مثال: '2024-02-14' (اتركه فارغاً لإخفاء العدّاد) */
+  phone:''    /* رقم واتساب عيسو بالصيغة الدولية بدون + ، مثال: '9647701234567' (اتركه فارغاً لإخفاء الزر) */
+};
+var $=function(s){return document.querySelector(s)};
+var ORDER=['s0','s1','sr','s2','s3'];
+function show(id){document.querySelector('.screen.on').classList.remove('on');$('#'+id).classList.add('on');window.scrollTo(0,0);
+  var d=document.querySelectorAll('#dots i');ORDER.forEach(function(x,i){d[i].className=x===id?'on':''});
+  $('#mu').hidden=id!=='s3'}
+document.querySelectorAll('[data-go]').forEach(function(b){b.addEventListener('click',function(){show(b.dataset.go)})});
+document.querySelectorAll('.n').forEach(function(b){b.addEventListener('click',function(){
+  $('#grid').hidden=true;$('#rep').hidden=false;$('#nx').hidden=false;hearts(innerWidth/2,innerHeight*.42,16)})});
+
+/* ===== المؤثرات ===== */
+var cv=$('#fx'),cx=cv.getContext('2d'),P=[],A=[],run=false,calm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+function size(){var d=devicePixelRatio||1;cv.width=innerWidth*d;cv.height=innerHeight*d;cx.setTransform(d,0,0,d,0,0)}
+addEventListener('resize',size);size();
+for(var i=0;i<16;i++)A.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:1+Math.random()*2.2,v:.15+Math.random()*.35});
+var COL=['#e0264a','#b3122b','#ff8fa5','#f5d0d6','#d9b26f','#ffffff'];
+function burst(n,ox,oy){if(calm)n=Math.round(n/4);for(var i=0;i<n;i++){var a=Math.random()*6.283,s=4+Math.random()*9;
+P.push({x:ox,y:oy,vx:Math.cos(a)*s,vy:Math.sin(a)*s-7,w:6+Math.random()*6,h:8+Math.random()*8,r:Math.random()*6,vr:(Math.random()-.5)*.3,c:COL[i%6],p:Math.random()<.4,g:.28})}go()}
+function hearts(x,y,n){for(var i=0;i<n;i++)P.push({x:x,y:y,vx:(Math.random()-.5)*5,vy:-2-Math.random()*4,r:0,vr:0,c:['#ff5b7a','#e0264a','#ff8fa5'][i%3],t:1,s:14+Math.random()*14,g:.06});go()}
+function rain(n){if(calm)return;var C=['#b3122b','#e0264a','#7a0b1e'];for(var i=0;i<n;i++){
+P.push({x:Math.random()*innerWidth,y:-20-Math.random()*500,vx:0,vy:1+Math.random()*1.5,w:10+Math.random()*6,h:14+Math.random()*8,r:Math.random()*6,vr:(Math.random()-.5)*.05,c:C[i%3],p:true,g:.004,sway:1})}go()}
+function go(){if(!run){run=true;requestAnimationFrame(tick)}}
+function tick(){cx.clearRect(0,0,innerWidth,innerHeight);
+if(!calm){cx.fillStyle='rgba(255,110,140,.3)';A.forEach(function(a){a.y-=a.v;if(a.y<-6){a.y=innerHeight+6;a.x=Math.random()*innerWidth}cx.beginPath();cx.arc(a.x,a.y,a.r,0,7);cx.fill()})}
+P=P.filter(function(p){return p.y<innerHeight+30});
+P.forEach(function(p){p.vy+=p.g;if(!p.sway){p.vx*=.99;p.vy*=.99}p.x+=p.vx+(p.sway?Math.sin(p.y/35)*.7:0);p.y+=p.vy;p.r+=p.vr;
+cx.save();cx.translate(p.x,p.y);cx.rotate(p.r);cx.fillStyle=p.c;
+if(p.t){cx.font=p.s+'px serif';cx.textAlign='center';cx.fillText('\u2764',0,0)}
+else{cx.beginPath();if(p.p)cx.ellipse(0,0,p.w/2,p.h/2,0,0,7);else cx.rect(-p.w/2,-p.h/2,p.w,p.h);cx.fill()}cx.restore()});
+if(!calm||P.length)requestAnimationFrame(tick);else run=false}
+go();
+
+/* ===== موسيقى (لحن هادئ يُعزف مباشرة بدون ملفات) ===== */
+var M=[[392,.75],[392,.25],[440,1],[392,1],[523,1],[494,2],[392,.75],[392,.25],[440,1],[392,1],[587,1],[523,2],
+[392,.75],[392,.25],[784,1],[659,1],[523,1],[494,1],[440,2],[698,.75],[698,.25],[659,1],[523,1],[587,1],[523,2]];
+var ac,master,mt;
+function stopM(){if(master){master.disconnect();master=null}clearTimeout(mt);$('#mu').textContent='🎵'}
+function playM(){stopM();var AC=window.AudioContext||window.webkitAudioContext;if(!AC)return;ac=ac||new AC();ac.resume();
+  var m=master=ac.createGain();m.connect(ac.destination);var t=ac.currentTime+.1,T=.55;
+  M.forEach(function(n){var o=ac.createOscillator(),g=ac.createGain();o.type='triangle';o.frequency.value=n[0];
+    g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(.17,t+.02);g.gain.exponentialRampToValueAtTime(.001,t+n[1]*T+.6);
+    o.connect(g);g.connect(m);o.start(t);o.stop(t+n[1]*T+.7);t+=n[1]*T});
+  $('#mu').textContent='🔇';mt=setTimeout(function(){if(master===m)stopM()},(t-ac.currentTime)*1000+800)}
+$('#mu').addEventListener('click',function(){master?stopM():playM()});
+
+/* ===== الهدية ===== */
+var g=$('#gift'),opened=false;
+g.addEventListener('click',function(){if(opened)return;opened=true;g.classList.add('open');$('#hint').style.opacity=0;playM();
+var r=g.getBoundingClientRect();burst(90,r.left+r.width/2,r.top+50);
+setTimeout(function(){burst(70,innerWidth*.15,innerHeight*.5)},350);
+setTimeout(function(){burst(70,innerWidth*.85,innerHeight*.5)},600);
+setTimeout(function(){var c=$('#card');
+  document.querySelectorAll('.poem span').forEach(function(s,i){s.style.animationDelay=(.7+i*.8)+'s'});
+  c.classList.add('show');rain(45);$('#acts').hidden=false;
+  setTimeout(function(){c.scrollIntoView({behavior:calm?'auto':'smooth',block:'center'})},500)},1100)});
+$('#more').addEventListener('click',function(){burst(80,innerWidth/2,innerHeight*.6);setTimeout(function(){burst(60,innerWidth*.2,innerHeight*.5)},250);setTimeout(function(){burst(60,innerWidth*.8,innerHeight*.5)},450)});
+document.addEventListener('click',function(e){if(opened&&$('#s3').classList.contains('on')&&!e.target.closest('button,a'))hearts(e.clientX,e.clientY,7)});
+
+/* ===== ميزات اختيارية ===== */
+if(CONFIG.since){var d=Math.floor((Date.now()-new Date(CONFIG.since+'T00:00:00'))/864e5);
+  if(d>0){$('#tg').hidden=false;$('#tg').textContent='نحن معاً منذ '+d+' يوماً 🤍'}}
+if(CONFIG.phone){var w=$('#wa');w.hidden=false;w.href='https://wa.me/'+CONFIG.phone+'?text='+encodeURIComponent('شكراً يا عيسو، أحبك ❤️')}
+</script>
+</body>
+</html>
